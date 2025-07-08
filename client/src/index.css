@@ -1,0 +1,275 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(248, 6%, 98%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(250, 5%, 95%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(248, 6%, 98%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(248, 6%, 98%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(250, 5%, 91%);
+  --input: hsl(250, 5%, 91%);
+  --primary: hsl(253, 69%, 69%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(280, 44%, 69%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --accent: hsl(310, 85%, 81%);
+  --accent-foreground: hsl(0, 0%, 100%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(253, 69%, 69%);
+  --radius: 0.75rem;
+  --sidebar-background: hsl(248, 6%, 98%);
+  --sidebar-foreground: hsl(20, 14.3%, 4.1%);
+  --sidebar-primary: hsl(253, 69%, 69%);
+  --sidebar-primary-foreground: hsl(0, 0%, 100%);
+  --sidebar-accent: hsl(250, 5%, 95%);
+  --sidebar-accent-foreground: hsl(20, 14.3%, 4.1%);
+  --sidebar-border: hsl(250, 5%, 91%);
+  --sidebar-ring: hsl(253, 69%, 69%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(253, 69%, 69%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(280, 44%, 69%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --accent: hsl(310, 85%, 81%);
+  --accent-foreground: hsl(0, 0%, 100%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --sidebar-background: hsl(240, 10%, 3.9%);
+  --sidebar-foreground: hsl(0, 0%, 98%);
+  --sidebar-primary: hsl(253, 69%, 69%);
+  --sidebar-primary-foreground: hsl(0, 0%, 100%);
+  --sidebar-accent: hsl(240, 3.7%, 15.9%);
+  --sidebar-accent-foreground: hsl(0, 0%, 98%);
+  --sidebar-border: hsl(240, 3.7%, 15.9%);
+  --sidebar-ring: hsl(240, 4.9%, 83.9%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .neumorphic {
+    background: hsl(248, 6%, 98%);
+    box-shadow: 
+      9px 9px 18px hsl(250, 5%, 88%),
+      -9px -9px 18px hsl(0, 0%, 100%);
+  }
+  
+  .dark .neumorphic {
+    background: hsl(240, 10%, 3.9%);
+    box-shadow: 
+      9px 9px 18px hsl(240, 3.7%, 1%),
+      -9px -9px 18px hsl(240, 3.7%, 15.9%);
+  }
+  
+  .neumorphic-pressed {
+    background: hsl(248, 6%, 98%);
+    box-shadow: 
+      inset 9px 9px 18px hsl(250, 5%, 88%),
+      inset -9px -9px 18px hsl(0, 0%, 100%);
+  }
+  
+  .dark .neumorphic-pressed {
+    background: hsl(240, 10%, 3.9%);
+    box-shadow: 
+      inset 9px 9px 18px hsl(240, 3.7%, 1%),
+      inset -9px -9px 18px hsl(240, 3.7%, 15.9%);
+  }
+  
+  .gradient-text {
+    background: linear-gradient(45deg, hsl(253, 69%, 69%), hsl(280, 44%, 69%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .hero-gradient {
+    background: linear-gradient(135deg, hsl(253, 69%, 69%) 0%, hsl(280, 44%, 69%) 50%, hsl(310, 85%, 81%) 100%);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: hsl(253, 69%, 69%) }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { 
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes bounce-slow {
+  0%, 100% { 
+    transform: translateY(0);
+  }
+  50% { 
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-typing {
+  overflow: hidden;
+  border-right: .15em solid hsl(253, 69%, 69%);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s ease-in-out infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s infinite;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: hsl(253, 69%, 69%);
+  border-radius: 50%;
+  animation: float 3s ease-in-out infinite;
+}
+
+.skill-bar {
+  height: 8px;
+  background: linear-gradient(90deg, hsl(253, 69%, 69%) 0%, hsl(280, 44%, 69%) 100%);
+  border-radius: 4px;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 2s ease-out;
+}
+
+.skill-bar.animate {
+  transform: scaleX(1);
+}
+
+.project-card {
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.dark .project-card:hover {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.tech-icon {
+  transition: all 0.3s ease;
+}
+
+.tech-icon:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.timeline-item {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.6s ease-out;
+}
+
+.timeline-item.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce-slow 2s infinite;
+}
+
+@media (max-width: 768px) {
+  .animate-typing {
+    font-size: 1.5rem;
+  }
+  
+  .neumorphic {
+    box-shadow: 
+      6px 6px 12px hsl(250, 5%, 88%),
+      -6px -6px 12px hsl(0, 0%, 100%);
+  }
+  
+  .dark .neumorphic {
+    box-shadow: 
+      6px 6px 12px hsl(240, 3.7%, 1%),
+      -6px -6px 12px hsl(240, 3.7%, 15.9%);
+  }
+}
