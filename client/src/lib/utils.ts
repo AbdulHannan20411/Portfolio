@@ -12,12 +12,8 @@ export function scrollToSection(sectionId: string) {
       behavior: "smooth",
       block: "start",
     });
-
-    // ✅ Optional: update the URL hash without page reload
-    window.history.pushState(null, "", `#${sectionId}`);
   }
 }
-
 
 export function debounce<T extends (...args: any[]) => any>(
   func: T,
