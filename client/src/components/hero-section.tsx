@@ -25,11 +25,11 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <img
-              src={hannanPhoto}
-              alt="Abdul Hannan - Professional Developer"
-              className="w-48 h-48 sm:w-56 sm:h-56 rounded-full object-cover border-4 border-white/20 shadow-2xl animate-float"
-            />
+           <img
+          src="/attached_Assets/1000463583.png"
+          alt="Abdul Hannan - Professional Developer"
+          className="w-48 h-48 sm:w-56 sm:h-56 rounded-full object-cover border-4 border-white/20 shadow-2xl animate-float"/>
+
             <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary/20 to-accent/20" />
           </motion.div>
           
