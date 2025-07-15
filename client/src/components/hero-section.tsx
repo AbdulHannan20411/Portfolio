@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { ParticlesBackground } from "@/components/particles-background";
 import { TypingAnimation } from "@/components/typing-animation";
 import { scrollToSection } from "@/lib/utils";
-import hannanPhoto from "@assets/1000463583.png"; // Fixed filename
 
 export function HeroSection() {
   return (
