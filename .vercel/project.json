@@ -1,0 +1,11 @@
+
+  {
+    "projectId": "prj_4forJt4OpYpAmZXUG3nkIWFh6kSL",
+    "settings": {
+      "buildCommand": "npm run vercel-build",
+      "outputDirectory": "client/dist",
+      "framework": "vite"
+    }
+  }
+  
+  
